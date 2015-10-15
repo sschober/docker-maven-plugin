@@ -1,9 +1,9 @@
 ## Introduction 
 
-It focuses on two major aspects:
+This introduction focuses on two major aspects:
 
-* **Building** and **pushing** Docker images which contain build artifacts
-* **Starting** and **stopping** Docker containers for integration
+* **Building** and **pushing** docker images which contain build artifacts
+* **Starting** and **stopping** docker containers for integration
   testing and development 
 
 Docker *images* are the central entity which can be configured. 
@@ -29,7 +29,7 @@ plugin can be pushed to public or private Docker registries with
 
 With this plugin it is possible to run completely isolated integration
 tests so you don't need to take care of shared resources. Ports can be
-mapped dynamically and made available as Maven properties to your
+mapped dynamically and made available as maven properties to your
 integration test code. 
 
 Multiple containers can be managed at once, which can be linked
@@ -53,8 +53,8 @@ You can use a single configuration for all goals (in fact, that's the
 recommended way). The configuration contains a general part and a list
 of image-specific configurations, one for each image. 
 
-The general part contains global configuration like the Docker URL or
-the path to the SSL certificates for communication with the Docker Host.
+The general part contains global configuration like the docker URL or
+the path to the SSL certificates for communication with the docker Host.
 
 Then, each image configuration has three parts:
 
@@ -115,7 +115,7 @@ Let's look at a plugin configuration example:
 ````
 
 Here, two images are specified. One is the official PostgreSQL 9 image from
-Docker Hub, which internally is referenced as "*database*" (`<alias>`). It
+docker hub, which internally is referenced as "*database*" (`<alias>`). It
 only has a `<run>` section which declares that the startup should wait
 until the given text pattern is matched in the log output. Next is a
 "*service*" image, which is specified in the `<build>` section. It
